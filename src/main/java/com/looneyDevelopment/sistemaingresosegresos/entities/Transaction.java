@@ -13,6 +13,8 @@ public class Transaction {
 
     private String concept;
 
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
     private Employee employee;
 
     public Long getId() {
