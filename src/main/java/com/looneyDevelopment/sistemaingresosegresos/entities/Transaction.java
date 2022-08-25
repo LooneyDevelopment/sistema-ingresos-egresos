@@ -3,6 +3,7 @@ package com.looneyDevelopment.sistemaingresosegresos.entities;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "transactions")
 public class Transaction {
 
     @Id
