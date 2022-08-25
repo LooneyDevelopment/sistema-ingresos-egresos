@@ -14,9 +14,9 @@ public class Transaction {
 
     private String concept;
 
-    @ManyToOne
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
+//    @ManyToOne
+//    @JoinColumn(name = "employee_id")
+//    private Employee employee;
 
     public Long getId() {
         return id;
@@ -42,11 +42,12 @@ public class Transaction {
         this.concept = concept;
     }
 
-    public Employee getEmployee() {
+/*    public Employee getEmployee() {
         return employee;
     }
 
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
+ */
 }
