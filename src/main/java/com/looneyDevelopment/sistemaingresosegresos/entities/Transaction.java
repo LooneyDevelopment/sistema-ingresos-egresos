@@ -1,8 +1,12 @@
 package com.looneyDevelopment.sistemaingresosegresos.entities;
 
+import javax.persistence.*;
 
+@Entity
 public class Transaction {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Float amount;
@@ -37,9 +41,5 @@ public class Transaction {
 
     public Employee getEmployee() {
         return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
     }
 }
