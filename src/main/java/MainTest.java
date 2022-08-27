@@ -1,3 +1,4 @@
+import com.looneyDevelopment.sistemaingresosegresos.entities.Enterprise;
 import com.looneyDevelopment.sistemaingresosegresos.entities.Transaction;
 
 public class MainTest {
@@ -5,6 +6,7 @@ public class MainTest {
         /*
           * Pruebas de la clase Transaction
          */
+        System.out.println("***** PROBANDO LA CLASE Transaction *****");
         // Instanciando la clase
         Transaction transaction = new Transaction();
         // Modificando el concepto
@@ -23,6 +25,30 @@ public class MainTest {
         /*
           * Pruebas de la clase Employee
          */
+
+        /*
+         * Pruebas de la clase Enterprise
+         */
+        System.out.println();
+        System.out.println("***** PROBANDO LA CLASE Enterprise *****");
+        // Instanciando la clase
+        Enterprise enterprise = new Enterprise();
+        // Modificando el nombre
+        enterprise.setName("Empresa prueba 1");
+        // Modificando la dirección
+        enterprise.setAddress("Medellín Colombia");
+        // Modificando el teléfono
+        enterprise.setPhone("3105555555");
+        // Modificando el Nit
+        enterprise.setDocument("1234567");
+        // Leyendo nombre
+        System.out.println("Empresa: " + enterprise.getName());
+        // Leyendo dirección
+        System.out.println("Empresa: " + enterprise.getAddress());
+        // Leyendo teléfono
+        System.out.println("Empresa: " + enterprise.getPhone());
+        // Leyendo Nit
+        System.out.println("Empresa: " + enterprise.getDocument());
     }
 
 }
