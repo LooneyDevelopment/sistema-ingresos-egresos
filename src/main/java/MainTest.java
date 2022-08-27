@@ -1,3 +1,4 @@
+import com.looneyDevelopment.sistemaingresosegresos.entities.Employee;
 import com.looneyDevelopment.sistemaingresosegresos.entities.Enterprise;
 import com.looneyDevelopment.sistemaingresosegresos.entities.Transaction;
 
@@ -22,9 +23,34 @@ public class MainTest {
         // Leyendo concepto y monto
         System.out.println(transaction.getConcept() + transaction.getAmount());
 
-        /*
-          * Pruebas de la clase Employee
-         */
+
+
+        //Pruebas de la clase Employee
+        System.out.println("\n");
+        System.out.println("******************************************");
+        System.out.println("***** PROBANDO LA CLASE Employee *****");
+        // Instanciando la clase
+        Employee employee  = new Employee();
+        // Modificando el nombre
+        employee.setNombre("Miguel Betancourt B");
+        // Modificando el roll
+        employee.setRol("Desarrollador Scrum");
+        // Modificando el Id
+        //employee.setId_Empleado();
+        // Modificando el correo
+        employee.setCorreo("workingbeta01@gmail.com");
+
+        // Leyendo nombre
+        System.out.println("Nombre: "+ employee.getNombre());
+        // Leyendo roll
+        System.out.println("Roll de " + employee.getNombre() + ": " + employee.getRol());
+        // Leyendo Id
+        System.out.println("Id de " + employee.getNombre() + ": " + employee.getId_Empleado());
+        // Leyendo correo
+        System.out.println("Correo de " + employee.getNombre() + ": " + employee.getCorreo());
+        System.out.println("******************************************");
+
+
 
         /*
          * Pruebas de la clase Enterprise
