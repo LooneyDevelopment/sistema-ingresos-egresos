@@ -7,6 +7,8 @@ import javax.persistence.*;
 @Table(name = "employee")
 public class Employee {
 
+    //Atributos
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id_Empleado;
