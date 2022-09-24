@@ -1,6 +1,6 @@
-package com.looneyDevelopment.sistemaingresosegresos.entities;
+package com.looneyDevelopment.sistemaingresosegresos.Entities;
 
-
+import com.looneyDevelopment.sistemaingresosegresos.entities.EnumRoleName;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
