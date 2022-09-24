@@ -1,7 +1,11 @@
 package com.looneyDevelopment.sistemaingresosegresos.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "employee")
@@ -11,10 +15,21 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_Empleado;
+    private Long id;
+
+    @Column
     private String nombre;
+    
+    @Column(nullable = false, unique = true)
     private String correo;
-    private String rol;
+
+    @OneToOne(mappedBy = "employee")
+    private Profile profile;
+
+    @Enumerated(EnumType.STRING)
+    @ElementCollection(targetClass = EnumRoleName.class, fetch = FetchType.EAGER)
+    private List<EnumRoleName> roles;
+
     //@OneToMany(mappedBy = "employee")
     //De Muchos a uno para Comunicar de enterpise a empoyee
     @ManyToOne
@@ -22,10 +37,15 @@ public class Employee {
     private Enterprise enterprise;
 
     //De Uno a muchos para Comunicar de employee a transaction
+    @JsonIgnore
     @OneToMany(mappedBy = "employee")
-    private Transaction transaction;
+    private List<Transaction> transactions;
 
+    @Column
+    private LocalDate createdAt;
 
+    @Column
+    private LocalDate updatedAt;
 
     //Contructor
     public Employee() {
@@ -34,11 +54,11 @@ public class Employee {
 
     //Metodos Getter and Setter
     public Long getId_Empleado() {
-        return id_Empleado;
+        return id;
     }
 
-    public void setId_Empleado(Long id_Empleado) {
-        this.id_Empleado = id_Empleado;
+    public void setId_Empleado(Long id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -57,11 +77,11 @@ public class Employee {
         this.correo = correo;
     }
 
-    public String getRol() {
-        return rol;
+    public List<EnumRoleName> getRol() {
+        return roles;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public void setRol(List<EnumRoleName> roles) {
+        this.roles = roles;
     }
 }
