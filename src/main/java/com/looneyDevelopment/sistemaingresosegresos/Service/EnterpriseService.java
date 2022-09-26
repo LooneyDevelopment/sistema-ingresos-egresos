@@ -1,7 +1,7 @@
-package com.looneyDevelopment.sistemaingresosegresos.service;
+package com.looneyDevelopment.sistemaingresosegresos.Service;
 
-import com.looneyDevelopment.sistemaingresosegresos.entities.Enterprise;
-import com.looneyDevelopment.sistemaingresosegresos.repository.EnterpriseRepository;
+import com.looneyDevelopment.sistemaingresosegresos.Entities.Enterprise;
+import com.looneyDevelopment.sistemaingresosegresos.Repository.EnterpriseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

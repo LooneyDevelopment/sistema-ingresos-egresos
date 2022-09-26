@@ -1,4 +1,4 @@
-package com.looneyDevelopment.sistemaingresosegresos.entities;
+package com.looneyDevelopment.sistemaingresosegresos.Entities;
 
 import javax.persistence.*;
 import java.time.LocalDate;

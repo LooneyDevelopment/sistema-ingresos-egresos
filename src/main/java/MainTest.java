@@ -1,6 +1,9 @@
-import com.looneyDevelopment.sistemaingresosegresos.entities.Employee;
-import com.looneyDevelopment.sistemaingresosegresos.entities.Enterprise;
-import com.looneyDevelopment.sistemaingresosegresos.entities.Transaction;
+import com.looneyDevelopment.sistemaingresosegresos.Entities.Employee;
+import com.looneyDevelopment.sistemaingresosegresos.Entities.Enterprise;
+import com.looneyDevelopment.sistemaingresosegresos.Entities.Transaction;
+import com.looneyDevelopment.sistemaingresosegresos.entities.EnumRoleName;
+
+import java.util.List;
 
 public class MainTest {
     public static void main(String[] args) {
@@ -34,7 +37,7 @@ public class MainTest {
         // Modificando el nombre
         employee.setNombre("Miguel Betancourt B");
         // Modificando el roll
-        employee.setRol("Desarrollador Scrum");
+        employee.setRol(List.of(EnumRoleName.OPERARIO));
         // Modificando el Id
         //employee.setId_Empleado();
         // Modificando el correo
